@@ -1,10 +1,10 @@
-const express = require('express');
+import express from 'express'
 const route = express.Router()
 
-route.get('/', (req,res) =>{
-    res.json('hello')
-})
+import * as controller from '../controllers/controllers.js'
+
+route.get('/', controller.get_home)
 
 
 
-module.exports = route
+export default route
