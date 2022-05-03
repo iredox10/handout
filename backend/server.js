@@ -1,6 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
-// import cors from 'cors';
+import cors from 'cors'
 
 const app = express()
 
@@ -14,6 +14,7 @@ mongoose.connect('mongodb://localhost/handout')
 // middlewares
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
+app.use(cors())
 app.use('/handout',routes)
 
 

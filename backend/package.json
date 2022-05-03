@@ -6,6 +6,7 @@
   "author": "idris adam idris ",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "mongoose": "^6.2.10",
     "nodemon": "^2.0.15"
