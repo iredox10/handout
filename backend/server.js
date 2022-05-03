@@ -1,5 +1,7 @@
-import express from 'express';
+import express from 'express'
 import mongoose from 'mongoose'
+// import cors from 'cors';
+
 const app = express()
 
 // internal module
@@ -12,7 +14,7 @@ mongoose.connect('mongodb://localhost/handout')
 // middlewares
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
-app.use('/api',routes)
+app.use('/handout',routes)
 
 
 

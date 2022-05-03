@@ -3,18 +3,20 @@ import mongoose from 'mongoose'
 const handoutSchema = new mongoose.Schema({
     courseName: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     courseCode:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     lecturer: {
         type: String,
         required: true   
     },
     creditUnit:{
-        type: String,
+        type: Number,
         required: true
     },
     department:{
@@ -26,7 +28,8 @@ const handoutSchema = new mongoose.Schema({
         required: true
     },
     document: String,
-
 })
 
-export default handoutModel = mongoose.model('handout',handoutSchema)
+const Handout = mongoose.model('handout',handoutSchema)
+
+export default Handout
